@@ -1,1 +1,0 @@
-if (jQuery) { alert("jQuery loaded"); }

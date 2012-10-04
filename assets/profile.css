@@ -61,9 +61,51 @@ Begin BashCustomer CSS Below
 
 body {
 	font-family:courier;
-
+	color: #000;
+	background-color: #fff;
 }
 
+a:link {	color: #333;	}  
+a:visited,a:hover,a:focus,a:active {	color: orange;	}
 
+h1 {
+	font-size: 3em;
+}
+
+#wrap {
+	width: 800px;
+	margin: 0 auto;
+}
+
+section {
+	margin: 50px 0;
+}
+
+#customize {
+	padding: 30px;
+	border: 3px dashed #333;
+}
+
+#terminal {
+	margin: 0;
+	border: 1px solid #000;
+	}
+
+#title {
+	background-color: #eee;
+	text-align: center;
+	padding: 2px 0;
+}
+
+#area {
+	padding: 2px;
+}
+
+#prompt {}
+
+#copytext {
+	padding: 30px;
+	border: 3px dashed #333;
+}
 
 

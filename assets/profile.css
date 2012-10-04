@@ -59,6 +59,11 @@ End CSS Reset
 Begin BashCustomer CSS Below
 */
 
+/*
+Common
+-----------------------
+*/
+
 body {
 	font-family:courier;
 	color: #000;
@@ -68,26 +73,60 @@ body {
 a:link {	color: #333;	}  
 a:visited,a:hover,a:focus,a:active {	color: orange;	}
 
-h1 {
-	font-size: 3em;
-}
-
 #wrap {
-	width: 800px;
-	margin: 0 auto;
+	width: 808px;
+	margin: 0 auto 100px auto;
 }
 
 section {
-	margin: 50px 0;
+	margin: 4px 0 40px 0;
 }
 
-#customize {
-	padding: 30px;
-	border: 3px dashed #333;
+header {
+	margin: 0 0 40px 0;
 }
+
+header h1 {
+	font-size: 3em;
+}
+
+header h3 {
+	font-style: italic;
+}
+
+h2 {
+	font-size: 1.4em;
+}
+
+ul {
+	margin: 0 0 10px 20px;
+}
+
+code, strong {
+	font-weight: bold;
+}
+
+.flag {
+	background-color: orange;
+}
+
+ul li {
+	display: inline-block;
+	padding: 8px;
+	margin: 4px;
+	background-color: #eee;
+	border-radius: 10px; 
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	border: 1px solid #eee;
+}
+
+/*
+Terminal Preview Box
+-----------------------
+*/
 
 #terminal {
-	margin: 0;
 	border: 1px solid #000;
 	}
 
@@ -98,10 +137,43 @@ section {
 }
 
 #area {
-	padding: 2px;
+	padding: 2px 2px 30px 2px;
 }
 
 #prompt {}
+
+/*
+Config
+-----------------------
+*/
+
+#config {
+	padding: 10px 30px;
+	border: 3px dotted #333;
+}
+
+/*
+Customize Config Options Box
+-----------------------
+*/
+
+#customize {
+	padding: 10px 30px;
+	border: 3px dotted #333;
+}
+
+#customize ul:last-child {
+	margin: 0 0 0 20px;
+}
+
+#customize h3 {
+	font-size: 1.2em;
+}
+
+/*
+bash profile copytext Box
+-----------------------
+*/
 
 #copytext {
 	padding: 30px;

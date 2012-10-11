@@ -74,7 +74,7 @@ a:link {	color: #333;	}
 a:visited,a:hover,a:focus,a:active {	color: orange;	}
 
 #wrap {
-	width: 808px;
+	width: 1200px;
 	margin: 0 auto 100px auto;
 }
 
@@ -127,6 +127,9 @@ Terminal Preview Box
 */
 
 #terminal {
+	width: 808px;
+	margin-left: auto;
+	margin-right: auto;
 	border: 1px solid #000;
 	}
 
@@ -150,6 +153,9 @@ Config
 #config {
 	padding: 10px 30px;
 	border: 3px dotted #333;
+	border-radius: 20px; 
+	-moz-border-radius: 20px; 
+	-webkit-border-radius: 20px; 
 }
 
 /*
@@ -160,6 +166,9 @@ Customize Config Options Box
 #customize {
 	padding: 10px 30px;
 	border: 3px dotted #333;
+	border-radius: 20px; 
+	-moz-border-radius: 20px; 
+	-webkit-border-radius: 20px; 
 }
 
 #customize ul:last-child {

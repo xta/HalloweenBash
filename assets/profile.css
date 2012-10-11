@@ -67,7 +67,7 @@ Common
 body {
 	font-family:courier;
 	color: #000;
-	background-color: #fff;
+	background-color: #eee;
 }
 
 a:link {	color: #333;	}  
@@ -79,7 +79,8 @@ a:visited,a:hover,a:focus,a:active {	color: orange;	}
 }
 
 section {
-	margin: 4px 0 40px 0;
+	width: 1024px;
+	margin: 4px auto 40px auto;
 }
 
 header {
@@ -114,11 +115,11 @@ ul li {
 	display: inline-block;
 	padding: 8px;
 	margin: 4px;
-	background-color: #eee;
+	background-color: #ccc;
 	border-radius: 10px; 
 	-moz-border-radius: 10px; 
 	-webkit-border-radius: 10px; 
-	border: 1px solid #eee;
+	border: 1px solid #ccc;
 }
 
 /*
@@ -134,7 +135,7 @@ Terminal Preview Box
 	}
 
 #title {
-	background-color: #eee;
+	background-color: #ddd;
 	text-align: center;
 	padding: 2px 0;
 }

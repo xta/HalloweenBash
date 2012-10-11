@@ -29,8 +29,8 @@
     </h2>
   <div id="area">
     <span id="prompt">
-    Last login: Wed Oct  3 18:14:19 on ttys001<br />
-    mac:~ Avi$ 
+    <!--Last login: Wed Oct  3 18:14:19 on ttys001<br />-->
+    macbook:Desktop jon$ 
     </span>
   </div>
   </section>
@@ -38,12 +38,12 @@
   <h2>Current Config</h2>
   <section id="config">
     <ul id="current_config" class="connectedSortable">
-      <li>\h</li>
-      <li>\:</li>
-      <li>\W</li>
-      <li>\space</li>
-      <li>\u</li>
-      <li>\$</li>
+      <li class="psh">short hostname</li>
+      <li class="pscolon">:</li>
+      <li class="psworking">current dir basename</li>
+      <li class="psspace">(space)</li>
+      <li class="psu">username</li>
+      <li class="psdollar">$</li>
     </ul>
   </section>
 
@@ -51,46 +51,40 @@
   <section id="customize">
     <h3>Prompt Strings (from line 1)</h3>
     <ul id="prompt_strings" class="connectedSortable">
-
-      <li>\a</li>
-      <li>\d</li>
-      <li class="flag">\D{format}</li>
-      <li>\e</li>
-      <li>\h</li>
-      <li>\H</li>
-      <li>\j</li>
-      <li>\l</li>
-      <li>\n</li>
-      <li>\r</li>
-      <li>\s</li>
-      <li>\t</li>
-      <li>\T</li>
-      <li>\A</li>
-      <li>\u</li>
-      <li>\v</li>
-      <li>\V</li>
-      <li>\w</li>
-      <li>\W</li>
-      <li class="flag">\nnn</li><!-- (octal ASCII char) -->
-      <li>\0</li>
-      <li>\!</li>
-      <li>\@</li>
-      <li>\#</li>
-      <li>\$</li>
-      <li>\^</li>
-      <li>\*</li>
-      <li>\-</li>
-      <li>\_</li>
-      <li>\[</li>
-      <li>\]</li>
-      <li>\\</li>
-      <li>\{</li>
-      <li>\}</li>
-      <li>\:</li>
-      <li>\,</li>
-      <li>\.</li>
-      <li>\?</li>
-      <li>\space</li>
+      <li class="psd">date (Weekday Month Date)</li>
+      <li class="psh">short hostname</li>
+      <li class="pshost">full hostname</li>
+      <li class="psj">current shell jobs</li>
+      <li class="psl">terminal device basename</li>
+      <li class="psn">(newline)</li>
+      <li class="pss">shell name</li>
+      <li class="pstime24hms">time (24h HH:MM:SS)</li>
+      <li class="pstime12hms">time (12h HH:MM:SS)</li>
+      <li class="pstime12ampm">time (12h AM PM)</li>
+      <li class="pstime24hhmm">time (24h HH:MM)</li>
+      <li class="psu">username</li>
+      <li class="psv">bash version</li>
+      <li class="psversion">full bash version</li>
+      <li class="psw">current working dir</li>
+      <li class="psworking">current dir basename</li>
+      <li class="psbang">!</li>
+      <li class="pshash">#</li>
+      <li class="psdollar">$</li>
+      <li class="psbackslash">\</li>
+      <li class="psleftbrack">[</li>
+      <li class="psrightbrack">]</li>
+      <li class="pszero">0</li>
+      <li class="pscaret">^</li>
+      <li class="pssplat">*</li>
+      <li class="psdash">-</li>
+      <li class="psunder">_</li>
+      <li class="psleftbrace">{</li>
+      <li class="psrightbrace">}</li>
+      <li class="pscolon">:</li>
+      <li class="pscomma">,</li>
+      <li class="psperiod">.</li>
+      <li class="psquestion">?</li>
+      <li class="psspace">(space)</li>
     </ul>
     <!-- color ul & li's go here -->
   </section>
@@ -101,7 +95,7 @@
   </section>
 
   <footer>
-    by <a href="http://www.rexfeng.com" title="Rex Feng">rexfeng</a> 2012 /cc: <a href="http://flatironschool.com/" title="Flatiron School">flatironschool</a>. Trick or treat!
+    by <a href="https://twitter.com/rexfeng" title="Rex Feng twitter">@rexfeng</a> 2012 /cc: <a href="http://flatironschool.com/" title="Flatiron School">flatironschool</a>. Trick or treat!
   </footer>
 
 </wrap>

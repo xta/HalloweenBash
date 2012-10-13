@@ -35,37 +35,36 @@
   </div>
   </section>
 
-  <h2>Current Config</h2>
-  <section id="config">
+  <h2>Your Configuration</h2>
+  <section id="config" class="setupbox">
     <ul id="current_config" class="connectedSortable">
       <li class="psh">short hostname</li>
       <li class="pscolon">:</li>
       <li class="psworking">current dir basename</li>
       <li class="psspace">(space)</li>
-      <li class="psu">username</li>
+      <li class="psu">user</li>
       <li class="psdollar">$</li>
     </ul>
   </section>
 
-  <h2>Drag these into '<strong>Current Config</strong>' above</h2>
-  <section id="customize">
-    <h3>Prompt Strings (from line 1)</h3>
+  <h2>1.) Drag these into '<strong>Your Configuration</strong>' above</h2>
+  <section id="customize" class="setupbox">
     <ul id="prompt_strings" class="connectedSortable">
-      <li class="psd">date (Weekday Month Date)</li>
+      <li class="psd">date (Day Month Date)</li>
       <li class="psh">short hostname</li>
       <li class="pshost">full hostname</li>
       <li class="psj">current shell jobs</li>
-      <li class="psl">terminal device basename</li>
+      <li class="psl">terminal device</li>
       <li class="psn">(newline)</li>
       <li class="pss">shell name</li>
       <li class="pstime24hms">time (24h HH:MM:SS)</li>
       <li class="pstime12hms">time (12h HH:MM:SS)</li>
       <li class="pstime12ampm">time (12h AM PM)</li>
       <li class="pstime24hhmm">time (24h HH:MM)</li>
-      <li class="psu">username</li>
+      <li class="psu">user</li>
       <li class="psv">bash version</li>
-      <li class="psversion">full bash version</li>
-      <li class="psw">current working dir</li>
+      <li class="psversion">long bash version</li>
+      <li class="psw">current dir</li>
       <li class="psworking">current dir basename</li>
       <li class="psbang">!</li>
       <li class="pshash">#</li>
@@ -86,12 +85,37 @@
       <li class="psquestion">?</li>
       <li class="psspace">(space)</li>
     </ul>
-    <!-- color ul & li's go here -->
+  </section>
+  
+  <h2>2.) Choose your colors</h2>
+  <section id="colorpick" class="setupbox">
+    <h3>Foreground</h3>
+    <ul id="foregroundcolor">
+      <li class="none selected">(None)</li>
+      <li class="black">Black</li>
+      <li class="blue">Blue</li>
+      <li class="green">Green</li>
+      <li class="cyan">Cyan</li>
+      <li class="red">Red</li>
+      <li class="purple">Purple</li>
+      <li class="brown">Brown</li>
+    </ul>
+    <h3>Background</h3>
+    <ul id="backgroundcolor">
+      <li class="none selected">(None)</li>
+      <li class="black">Black</li>
+      <li class="blue">Blue</li>
+      <li class="green">Green</li>
+      <li class="cyan">Cyan</li>
+      <li class="red">Red</li>
+      <li class="purple">Purple</li>
+      <li class="brown">Brown</li>
+    </ul>
   </section>
 
-  <h2>Copy this into your <code>~/.bash_profile</code></h2>
+  <h2>3.) Copy this into your <code>~/.bash_profile</code></h2>
   <section id="copytext">
-    PS1=\h:\W \u\$
+    export PS1="\h:\W \u\$"
   </section>
 
   <footer>

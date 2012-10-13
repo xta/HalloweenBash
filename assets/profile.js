@@ -1,31 +1,13 @@
 /*
 HalloweenBash 2012 by rexfeng
-
-js to-do list
-====================
-[x] drag and drop, sort function
-[x] detect list sort action finish
-
-[x] map out js var prompt string object
-
-[x] parse CurrentConfig to be able to update BashPreview & Copytext
-[x] ensure on change of sort, check state of everything - keep terminal display & output copy in sync
-
-[ ] wrap terminal text if chars > 80
-[ ] after drag event, set config settings available section to start state (as if no change)
-
-[?] get current time
-[ ] onclick #copytext, select all text
 */
 
 $(document).ready(function() {
 
-
-
-// get initial state
+	// get initial state
 	var start_config_avail = $('#customize').html();
 
-// enable sort with jquery-ui
+	// enable sortable lists with jquery-ui
 	$(function() {
     $( "#current_config, #prompt_strings" ).sortable({
       connectWith: ".connectedSortable",
@@ -42,7 +24,7 @@ $(document).ready(function() {
 // var prompt_strings = $('#prompt_strings').html();
 // var copytext = $('#copytext').html();
 
-// update page function() upon page sort
+	// update page function() upon page sort
 	function update_page() {
 
 		// get current config
@@ -53,7 +35,7 @@ $(document).ready(function() {
 
 		// update bash preview & copytext
 			var preview = "";
-			var copygoeshere = "PS1=";
+			var copygoeshere = "export PS1=\"";
 			
 			for (var i = 0; i < inputs.length; i++) {
 				preview += psobj[inputs[i]].example_copy;
@@ -61,16 +43,20 @@ $(document).ready(function() {
 			}
 
 			$('#prompt').html(preview);
-			$('#copytext').html(copygoeshere);
+			$('#copytext').html(copygoeshere + "\"");
 
 			// if bash preview text > 80 chars, then wrap
 
 		// reset current config (prompt strings)
 	}
 
+	// on click for colors
+		// ul#foregroundcolor
+		// ul#backgroundcolor
 
 
-// create list of available prompt strings
+
+	// create list of available prompt strings
 	/*
 							 text_id: unique a-z name of prompt string
 					 bash_string: what needs to be copied into bash_profile
@@ -309,15 +295,15 @@ $(document).ready(function() {
 		"psspace": {
 					         text_id: "psspace", 
 					     bash_string: " ", 
-					    example_copy: " ", 
+					    example_copy: "&nbsp;", 
 					long_description: "space"
 		}
 	};
 
 
 
-// select all text
-	// goes here
+	// select all text
+		// goes here
 
 
 

@@ -66,12 +66,13 @@ Common
 
 body {
 	font-family:courier;
-	color: #000;
-	background-color: #eee;
+	color: #353635;
+	background-color: #FFA335;
 }
 
-a:link {	color: #333;	}  
-a:visited,a:hover,a:focus,a:active {	color: orange;	}
+a:link,a:visited,a:hover,a:focus,a:active {	
+	color: #AB4A2B;	
+}
 
 #wrap {
 	width: 1200px;
@@ -107,19 +108,23 @@ code, strong {
 	font-weight: bold;
 }
 
-.flag {
-	background-color: orange;
-}
-
 ul li {
 	display: inline-block;
 	padding: 8px;
 	margin: 4px;
-	background-color: #ccc;
+	background-color: #FFA335;
 	border-radius: 10px; 
 	-moz-border-radius: 10px; 
 	-webkit-border-radius: 10px; 
-	border: 1px solid #ccc;
+}
+
+.setupbox {
+	padding: 10px 30px;
+	border: 3px dotted #AB4A2B;
+	border-radius: 20px; 
+	-moz-border-radius: 20px; 
+	-webkit-border-radius: 20px; 
+	background-color: #D98731;
 }
 
 /*
@@ -128,20 +133,26 @@ Terminal Preview Box
 */
 
 #terminal {
-	width: 808px;
+	width: 820px;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: #fff;
 	border: 1px solid #000;
+	border-radius: 0 0 8px 8px;
+	-moz-border-radius: 0 0 8px 8px; 
+	-webkit-border-radius: 0 0 8px 8px; 
 	}
 
 #title {
 	background-color: #ddd;
 	text-align: center;
 	padding: 2px 0;
+	border-bottom: 1px solid #000;
 }
 
 #area {
-	padding: 2px 2px 30px 2px;
+	padding: 4px 4px 80px 4px;
+	word-wrap: break-word;
 }
 
 #prompt {}
@@ -152,11 +163,6 @@ Config
 */
 
 #config {
-	padding: 10px 30px;
-	border: 3px dotted #333;
-	border-radius: 20px; 
-	-moz-border-radius: 20px; 
-	-webkit-border-radius: 20px; 
 }
 
 /*
@@ -165,11 +171,6 @@ Customize Config Options Box
 */
 
 #customize {
-	padding: 10px 30px;
-	border: 3px dotted #333;
-	border-radius: 20px; 
-	-moz-border-radius: 20px; 
-	-webkit-border-radius: 20px; 
 }
 
 #customize ul:last-child {
@@ -181,13 +182,22 @@ Customize Config Options Box
 }
 
 /*
+color pick Box
+-----------------------
+*/
+
+#colorpick {
+}
+
+/*
 bash profile copytext Box
 -----------------------
 */
 
 #copytext {
 	padding: 30px;
-	border: 3px dashed #333;
+	border: 3px dashed #353635;
+	background-color: #D98731;
 }
 
 

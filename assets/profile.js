@@ -27,15 +27,52 @@ $(document).ready(function() {
 	// update page function() upon page sort
 	function update_page() {
 
-		// get current config
-			var inputs = [];
+		var inputs = [];
+
+		var color_pre;
+		var color_post;
+
+		var foreground_selected;
+		var background_selected;
+
+		var preview = "";
+		var copygoeshere = "export PS1=\"";
+
+		// get current config	
 			$('ul#current_config li').each(function(){
 				inputs.push($(this).attr('class'));
 			});
 
+		// get color configs
+			$('ul#foregroundcolor li').each(function(){
+				if ($(this).hasClass('selected')) {
+					foreground_selected = $(this).attr("class").split(' ')[0];
+				}
+			});
+
+			$('ul#backgroundcolor li').each(function(){
+				if ($(this).hasClass('selected')) {
+					background_selected = $(this).attr("class").split(' ')[0];
+				}
+			});
+
+		// update color_pre and color_post
+			if ((foreground_selected == 'none') && (background_selected == 'none')) {
+
+				color_pre = "";
+				color_post = "";
+
+			} else {	// update css class reflect colors in #prompt & bash strings in #copytext
+
+// color_pre
+// color_post
+
+			}
+
 		// update bash preview & copytext
-			var preview = "";
-			var copygoeshere = "export PS1=\"";
+
+// color_pre
+// color_post
 			
 			for (var i = 0; i < inputs.length; i++) {
 				preview += psobj[inputs[i]].example_copy;
@@ -45,14 +82,21 @@ $(document).ready(function() {
 			$('#prompt').html(preview);
 			$('#copytext').html(copygoeshere + "\"");
 
-			// if bash preview text > 80 chars, then wrap
-
 		// reset current config (prompt strings)
 	}
 
-	// on click for colors
-		// ul#foregroundcolor
-		// ul#backgroundcolor
+	// on click for #colorpick for each <ul>
+		$('ul#foregroundcolor > li').click(function() {
+		  $('ul#foregroundcolor > li').removeClass('selected');
+		  $(this).addClass('selected');
+		  update_page;
+		});
+
+		$('ul#backgroundcolor > li').click(function() {
+		  $('ul#backgroundcolor > li').removeClass('selected');
+		  $(this).addClass('selected');
+		  update_page;
+		});
 
 
 

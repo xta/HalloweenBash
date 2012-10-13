@@ -67,11 +67,18 @@ Common
 body {
 	font-family:courier;
 	color: #353635;
-	background-color: #FFA335;
+	background-color: #ffa335;
 }
 
-a:link,a:visited,a:hover,a:focus,a:active {	
-	color: #AB4A2B;	
+a:link,a:visited {	
+	color: #ab4a2b;
+	border-bottom: 1px solid #ab4a2b;
+	text-decoration: none;
+}
+
+a:hover,a:focus,a:active {
+	border-bottom: 1px dashed #ab4a2b;
+	text-decoration: none;
 }
 
 #wrap {
@@ -90,6 +97,7 @@ header {
 
 header h1 {
 	font-size: 3em;
+	margin-bottom: 8px;
 }
 
 header h3 {
@@ -112,7 +120,7 @@ ul li {
 	display: inline-block;
 	padding: 8px;
 	margin: 4px;
-	background-color: #FFA335;
+	background-color: #ffa335;
 	border-radius: 10px; 
 	-moz-border-radius: 10px; 
 	-webkit-border-radius: 10px; 
@@ -120,11 +128,11 @@ ul li {
 
 .setupbox {
 	padding: 10px 30px;
-	border: 3px dotted #AB4A2B;
+	border: 3px dotted #ab4a2b;
 	border-radius: 20px; 
 	-moz-border-radius: 20px; 
 	-webkit-border-radius: 20px; 
-	background-color: #D98731;
+	background-color: #d98731;
 }
 
 /*
@@ -189,6 +197,46 @@ color pick Box
 #colorpick {
 }
 
+.selected {
+	border: 2px solid #353635;
+}
+
+#colorpick > ul > li:after {
+	content: " ";
+	display: inline-block;
+	height: 12px; 
+	width: 20px;
+	margin: 0 0 -1px 4px;
+}
+
+#colorpick > ul > li.black:after {
+	background-color: black;
+}
+
+#colorpick > ul > li.blue:after {
+	background-color: blue;
+}
+
+#colorpick > ul > li.green:after {
+	background-color: green;
+}
+
+#colorpick > ul > li.cyan:after {
+	background-color: cyan;
+}
+
+#colorpick > ul > li.red:after {
+	background-color: red;
+}
+
+#colorpick > ul > li.purple:after {
+	background-color: purple;
+}
+
+#colorpick > ul > li.brown:after {
+	background-color: brown;
+}
+
 /*
 bash profile copytext Box
 -----------------------
@@ -197,7 +245,7 @@ bash profile copytext Box
 #copytext {
 	padding: 30px;
 	border: 3px dashed #353635;
-	background-color: #D98731;
+	background-color: #d98731;
 }
 
 

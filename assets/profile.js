@@ -279,13 +279,13 @@ $(document).ready(function() {
 		"psw": {
 					         text_id: "psw", 
 					     bash_string: "\\w", 
-					    example_copy: "~/Desktop", 
+					    example_copy: "~/Desktop/HalloweenBash", 
 					long_description: "the current working directory"
 		},
 		"psworking": {
 					         text_id: "psworking", 
 					     bash_string: "\\W", 
-					    example_copy: "Desktop", 
+					    example_copy: "HalloweenBash", 
 					long_description: "the basename of the current working directory"
 		},
 		"psbang": {

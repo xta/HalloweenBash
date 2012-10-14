@@ -68,6 +68,7 @@ body {
 	font-family:courier;
 	color: #353635;
 	background-color: #ffa335;
+	border-bottom: 8px solid #ab4a2b;
 }
 
 a:link,a:visited {	
@@ -165,6 +166,8 @@ Terminal Preview Box
 
 #prompt {}
 
+
+
 /*
 Config
 -----------------------
@@ -207,6 +210,7 @@ color pick Box
 	height: 12px; 
 	width: 20px;
 	margin: 0 0 -1px 4px;
+	padding: 0 2px 0 2px;
 }
 
 #colorpick > ul > li.black:after {

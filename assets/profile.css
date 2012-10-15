@@ -67,18 +67,18 @@ Common
 body {
 	font-family:courier;
 	color: #353635;
-	background-color: #ffa335;
+	background-color: #d98731;
 	border-bottom: 8px solid #ab4a2b;
 }
 
 a:link,a:visited {	
-	color: #ab4a2b;
-	border-bottom: 1px solid #ab4a2b;
+	color: #fff;
+	border-bottom: 1px solid #ddd;
 	text-decoration: none;
 }
 
 a:hover,a:focus,a:active {
-	border-bottom: 1px dashed #ab4a2b;
+	border-bottom: 1px dashed #ddd;
 	text-decoration: none;
 }
 
@@ -102,6 +102,7 @@ header h1 {
 }
 
 header h3 {
+	color: #fff;
 	font-style: italic;
 }
 
@@ -120,11 +121,12 @@ code, strong {
 ul li {
 	display: inline-block;
 	padding: 8px;
-	margin: 4px;
-	background-color: #ffa335;
+	margin: 4px;	
 	border-radius: 10px; 
 	-moz-border-radius: 10px; 
-	-webkit-border-radius: 10px; 
+	-webkit-border-radius: 10px;
+	color:#fff;
+	background-color: #000; 
 }
 
 .setupbox {
@@ -133,7 +135,7 @@ ul li {
 	border-radius: 20px; 
 	-moz-border-radius: 20px; 
 	-webkit-border-radius: 20px; 
-	background-color: #d98731;
+	background-color: #ffa461;
 }
 
 /*
@@ -201,7 +203,7 @@ color pick Box
 }
 
 .selected {
-	border: 2px solid #353635;
+	border: 4px solid #ab4a2b;
 }
 
 #colorpick > ul > li:after {
@@ -211,6 +213,17 @@ color pick Box
 	width: 20px;
 	margin: 0 0 -1px 4px;
 	padding: 0 2px 0 2px;
+	border: 1px solid #fff;
+}
+
+#colorpick > ul > li:first-child:after {
+	content: "";
+	display: inline-block;
+	height: 0; 
+	width: 0;
+	margin: 0 0 -1px 4px;
+	padding: 0 2px 0 2px;
+	border: 0;
 }
 
 #colorpick > ul > li.black:after {
@@ -249,7 +262,7 @@ bash profile copytext Box
 #copytext {
 	padding: 30px;
 	border: 3px dashed #353635;
-	background-color: #d98731;
+	background-color: #ddd;
 }
 
 

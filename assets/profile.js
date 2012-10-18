@@ -288,6 +288,12 @@ $(document).ready(function() {
 					    example_copy: "HalloweenBash", 
 					long_description: "the basename of the current working directory"
 		},
+		"psgit": {
+									 text_id: "psgit",
+									 bash_string: "$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/')",
+									 example_copy: "master",
+									 long_description: "the current git branch"
+		},
 		"psbang": {
 					         text_id: "psbang", 
 					     bash_string: "!", 

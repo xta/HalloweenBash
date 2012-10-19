@@ -138,6 +138,13 @@ ul li {
 	background-color: #ffa461;
 }
 
+img#ribbon {
+	position: absolute; 
+	top: 0; 
+	right: 0; 
+	border: 0;
+}
+
 /*
 Terminal Preview Box
 -----------------------

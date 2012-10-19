@@ -298,7 +298,7 @@ $(document).ready(function() {
 									 bash_string: "\\$(parse_git_branch)",
 									 example_copy: "(master)",
 									 long_description: "the current git branch",
-									 helpers: "function parse_git_branch { <br /> git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/ (\\1)/' <br /> }"
+									 helpers: "function parse_git_branch { <br /> &nbsp;&nbsp; git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/ (\\1)/' <br /> }"
 		},
 		"psbang": {
 					         text_id: "psbang", 

@@ -22,6 +22,7 @@ $(document).ready(function() {
 			var inputs = [],
 					preview = "",
 					copygoeshere = "";
+					helperfunctions = "";
 
 			var color_pre, 	// for copytext
 					color_post,
@@ -126,6 +127,9 @@ $(document).ready(function() {
 				for (var i = 0; i < inputs.length; i++) {
 					preview += psobj[inputs[i]].example_copy;
 					copygoeshere += psobj[inputs[i]].bash_string;
+					helper = psobj[inputs[i]].helpers
+					if (helper != undefined)
+						helperfunctions += psobj[inputs[i]].helpers;
 				}
 
 				if (foreground_selected == 'none') {
@@ -141,6 +145,7 @@ $(document).ready(function() {
 				}
 
 				$('#prompt').html(preview);
+				$('#additionaltext').html(helperfunctions);
 				$('#copytext').html("export PS1=\"" + color_pre + copygoeshere + color_post + "\"");
 
 		}
@@ -288,6 +293,13 @@ $(document).ready(function() {
 					    example_copy: "HalloweenBash", 
 					long_description: "the basename of the current working directory"
 		},
+		"psgit": {
+									 text_id: "psgit",
+									 bash_string: "\\$(parse_git_branch)",
+									 example_copy: "(master)",
+									 long_description: "the current git branch",
+									 helpers: "function parse_git_branch { <br /> &nbsp;&nbsp; git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/(\\1)/' <br /> }"
+		},
 		"psbang": {
 					         text_id: "psbang", 
 					     bash_string: "!", 
@@ -302,8 +314,8 @@ $(document).ready(function() {
 		},
 		"psdollar": {
 					         text_id: "psdollar", 
-					     bash_string: "$", 
-					    example_copy: "$", 
+					     bash_string: "$ ", 
+					    example_copy: "$ ", 
 					long_description: "dollar sign"
 		},
 		// "": {

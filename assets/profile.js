@@ -164,6 +164,12 @@ $(document).ready(function() {
 		});
 
 
+	// toggle about section
+		$("#about-link").click(function () {
+		  $("#about").slideToggle(100);
+		});
+
+
 
 	// create list of available prompt strings
 	/*

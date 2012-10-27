@@ -146,6 +146,26 @@ img#ribbon {
 }
 
 /*
+About Box
+-----------------------
+*/
+
+hgroup h3 span {
+	float: right;
+	padding-right: 53px;
+}
+
+#about {
+	color: #fff;
+	display: none;
+}
+
+#about section p {
+	line-height: 120%;
+	margin-bottom: 20px;
+}
+
+/*
 Terminal Preview Box
 -----------------------
 */

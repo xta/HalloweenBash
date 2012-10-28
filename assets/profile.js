@@ -127,9 +127,11 @@ $(document).ready(function() {
 				for (var i = 0; i < inputs.length; i++) {
 					preview += psobj[inputs[i]].example_copy;
 					copygoeshere += psobj[inputs[i]].bash_string;
-					helper = psobj[inputs[i]].helpers
-					if (helper != undefined)
+
+					helper = psobj[inputs[i]].helpers;
+					if (helper != undefined) {
 						helperfunctions += psobj[inputs[i]].helpers;
+					}
 				}
 
 				if (foreground_selected == 'none') {
@@ -321,7 +323,7 @@ $(document).ready(function() {
 		"psdollar": {
 					         text_id: "psdollar", 
 					     bash_string: "$ ", 
-					    example_copy: "$ ", 
+					    example_copy: "$&nbsp;", 
 					long_description: "dollar sign"
 		},
 		// "": {

@@ -12,156 +12,154 @@
 </head>
 
 <body>
-<div id="wrap">
+<div id="bg-wrap">
+  <div id="content-wrap">
 
-  <header>
-    <hgroup>
-      <h1><a href="./index.html" title="Bash Profile Generator">Bash Profile Generator</a></h1>
-      <h3>Your very own costume for Halloween.<span id="about-link">(about Halloween Bash)</span></h3>
-    </hgroup>
-  </header>
+    <header>
+      <hgroup>
+        <h1><a href="./index.html" title="Bash Profile Generator">Bash Profile Generator</a></h1>
+        <h3>Your very own costume for Halloween.</h3>
+      </hgroup>
+    </header>
 
-  <div id="about">
-    <h2>about</h2>
-    <section>
-      <p>
-        As a student at the <a href="http://flatironschool.com/">Flatiron School</a> in NYC, 
-        one of the first things we did was customize our bash prompt. 
-        This involved deciphering webpages just to do something as simple 
-        as changing where the current directory shows up. 
-        I thought there had to be an easier way, one that didn't involve reading the bash manual. 
-        Halloween Bash was created to help people customize their bash profile 
-        with an intuitive drag & drop interface.
-      </p>  
-      <p>
-        If you have any comments or feedback, please don't hesitate to reach out to me 
-        at <a href="https://twitter.com/rexfeng">@rexfeng</a>. Thanks for checking out HalloweenBash.
-      </p>
+    <h2>bash preview</h2>
+    <section id="terminal">
+      <h2 id="title">
+      HalloweenBash &#8212; bash &#8212; 80x24
+      </h2>
+    <div id="area">
+      <span id="prompt">
+        <!--Last login: Wed Oct  3 18:14:19 on ttys001<br />-->
+        macbook:HalloweenBash jon$ 
+      </span>
+    </div>
     </section>
-  </div>
 
-  <h2>bash preview</h2>
-  <section id="terminal">
-    <h2 id="title">
-    HalloweenBash &#8212; bash &#8212; 80x24
-    </h2>
-  <div id="area">
-    <span id="prompt">
-      <!--Last login: Wed Oct  3 18:14:19 on ttys001<br />-->
-      macbook:HalloweenBash jon$ 
-    </span>
-  </div>
-  </section>
-
-  <h2>Your Configuration</h2>
-  <section id="config" class="setupbox">
-    <ul id="current_config" class="connectedSortable">
-      <li class="psh">short hostname</li>
-      <li class="pscolon">:</li>
-      <li class="psworking">current dir basename</li>
-      <li class="psspace">(space)</li>
-      <li class="psu">user</li>
-      <li class="psdollar">$</li>
-    </ul>
-  </section>
-
-  <h2>1.) Drag these into (<strong>Your Configuration</strong>) above</h2>
-  <section id="customize" class="setupbox">
-    <ul id="prompt_strings" class="connectedSortable">
-      <li class="psd">date (Day Month Date)</li>
-      <li class="psh">short hostname</li>
-      <li class="pshost">full hostname</li>
-      <li class="psj">current shell jobs</li>
-      <li class="psl">terminal device</li>
-      <li class="psn">(newline)</li>
-      <li class="pss">shell name</li>
-      <li class="pstime24hms">time (24h HH:MM:SS)</li>
-      <li class="pstime12hms">time (12h HH:MM:SS)</li>
-      <li class="pstime12ampm">time (12h AM PM)</li>
-      <li class="pstime24hhmm">time (24h HH:MM)</li>
-      <li class="psu">user</li>
-      <li class="psv">bash version</li>
-      <li class="psversion">long bash version</li>
-      <li class="psw">current dir</li>
-      <li class="psworking">current dir basename</li>
-      <li class="psgit">current git branch</li>
-      <li class="psbang">!</li>
-      <li class="pshash">#</li>
-      <!-- <li class="psdollar">$</li> -->
-      <!-- <li class="psbackslash">\</li> -->
-      <li class="psleftbrack">[</li>
-      <li class="psrightbrack">]</li>
-      <li class="pszero">0</li>
-      <li class="pscaret">^</li>
-      <li class="pssplat">*</li>
-      <li class="psdash">-</li>
-      <li class="psunder">_</li>
-      <li class="psleftbrace">{</li>
-      <li class="psrightbrace">}</li>
-      <li class="pscolon">:</li>
-      <li class="pscomma">,</li>
-      <li class="psperiod">.</li>
-      <li class="psquestion">?</li>
-      <li class="psspace">(space)</li>
-    </ul>
-  </section>
-  
-  <h2>2.) Choose your colors</h2>
-  <section id="colorpick" class="setupbox">
-    <h3>Foreground</h3>
-    <ul id="foregroundcolor">
-      <li class="none selected">(default)</li>
-      <li class="black">Black</li>
-      <li class="blue">Blue</li>
-      <li class="green">Green</li>
-      <li class="cyan">Cyan</li>
-      <li class="red">Red</li>
-      <li class="purple">Purple</li>
-      <li class="brown">Brown</li>
-    </ul>
-    <h3>Background</h3>
-    <ul id="backgroundcolor">
-      <li class="none selected">(default)</li>
-      <li class="black">Black</li>
-      <li class="blue">Blue</li>
-      <li class="green">Green</li>
-      <li class="cyan">Cyan</li>
-      <li class="red">Red</li>
-      <li class="purple">Purple</li>
-      <li class="brown">Brown</li>
-    </ul>
-  </section>
-
-  <h2>3.) Copy this into your <code>~/.bash_profile</code></h2>
-  <section id="copycode">
-    <section id="additionaltext"></section>
-    <section id="copytext">
-      export PS1="\h:\W \u\$ "
+    <h2>Your Configuration</h2>
+    <section id="config" class="setupbox">
+      <ul id="current_config" class="connectedSortable">
+        <li class="psh">short hostname</li>
+        <li class="pscolon">:</li>
+        <li class="psworking">current dir basename</li>
+        <li class="psspace">(space)</li>
+        <li class="psu">user</li>
+        <li class="psdollar">$</li>
+      </ul>
     </section>
-  </section>
 
-  <footer>
-    by <a href="https://twitter.com/rexfeng" title="Rex Feng twitter">@rexfeng</a> 2012 /cc: <a href="http://flatironschool.com/" title="Flatiron School">flatironschool</a>. Trick or treat!
-  </footer>
+    <h2>1.) Drag these into (<strong>Your Configuration</strong>) above</h2>
+    <section id="customize" class="setupbox">
+      <ul id="prompt_strings" class="connectedSortable">
+        <li class="psd">date (Day Month Date)</li>
+        <li class="psh">short hostname</li>
+        <li class="pshost">full hostname</li>
+        <li class="psj">current shell jobs</li>
+        <li class="psl">terminal device</li>
+        <li class="psn">(newline)</li>
+        <li class="pss">shell name</li>
+        <li class="pstime24hms">time (24h HH:MM:SS)</li>
+        <li class="pstime12hms">time (12h HH:MM:SS)</li>
+        <li class="pstime12ampm">time (12h AM PM)</li>
+        <li class="pstime24hhmm">time (24h HH:MM)</li>
+        <li class="psu">user</li>
+        <li class="psv">bash version</li>
+        <li class="psversion">long bash version</li>
+        <li class="psw">current dir</li>
+        <li class="psworking">current dir basename</li>
+        <li class="psgit">current git branch</li>
+        <li class="psbang">!</li>
+        <li class="pshash">#</li>
+        <!-- <li class="psdollar">$</li> -->
+        <!-- <li class="psbackslash">\</li> -->
+        <li class="psleftbrack">[</li>
+        <li class="psrightbrack">]</li>
+        <li class="pszero">0</li>
+        <li class="pscaret">^</li>
+        <li class="pssplat">*</li>
+        <li class="psdash">-</li>
+        <li class="psunder">_</li>
+        <li class="psleftbrace">{</li>
+        <li class="psrightbrace">}</li>
+        <li class="pscolon">:</li>
+        <li class="pscomma">,</li>
+        <li class="psperiod">.</li>
+        <li class="psquestion">?</li>
+        <li class="psspace">(space)</li>
+      </ul>
+    </section>
+    
+    <h2>2.) Choose your colors</h2>
+    <section id="colorpick" class="setupbox">
+      <h3>Foreground</h3>
+      <ul id="foregroundcolor">
+        <li class="none selected">(default)</li>
+        <li class="black">Black</li>
+        <li class="blue">Blue</li>
+        <li class="green">Green</li>
+        <li class="cyan">Cyan</li>
+        <li class="red">Red</li>
+        <li class="purple">Purple</li>
+        <li class="brown">Brown</li>
+      </ul>
+      <h3>Background</h3>
+      <ul id="backgroundcolor">
+        <li class="none selected">(default)</li>
+        <li class="black">Black</li>
+        <li class="blue">Blue</li>
+        <li class="green">Green</li>
+        <li class="cyan">Cyan</li>
+        <li class="red">Red</li>
+        <li class="purple">Purple</li>
+        <li class="brown">Brown</li>
+      </ul>
+    </section>
+
+    <h2>3.) Copy this into your <code>~/.bash_profile</code></h2>
+    <section id="copycode">
+      <section id="additionaltext"></section>
+      <section id="copytext">
+        export PS1="\h:\W \u\$ "
+      </section>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  <h2>
+    Made in NYC at <a href="http://flatironschool.com/">The Flatiron School</a> 2012.
+  </h2>
+  <p>
+    In our first week of learning to code, we were getting familiar with the Command Line and
+    customizing our bash prompts. 
+    This involved deciphering webpages just to do simple tasks like adding colors or displaying the time.
+    I thought there had to be an easier way to do this, so 
+    <a href="./index.html" title="Bash Profile Generator">Halloween Bash</a> was created to allow people customize their bash profile 
+    with an intuitive drag & drop interface.
+  </p>  
+  <p>
+    If you have any comments or feedback, please reach out to me 
+    at <a href="https://twitter.com/rexfeng">@rexfeng</a>. Thanks for checking out <a href="./index.html" title="Bash Profile Generator">Halloween Bash</a>!
+  </p>
+</footer>
 
 <a href="https://github.com/xta/HalloweenBash"><img id="ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"/></a>
-</div>
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script src="./assets/jquery.ui.core.js"></script>
   <script src="./assets/jquery.ui.widget.js"></script>
   <script src="./assets/jquery.ui.mouse.js"></script>
   <script src="./assets/jquery.ui.sortable.js"></script>
   <script src="./assets/profile.js"></script>
-
   <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-34781094-2']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34781094-2']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
   </script>
 </body>  
 </html>

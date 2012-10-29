@@ -67,8 +67,8 @@ Common
 body {
 	font-family:courier;
 	color: #353635;
-	background-color: #d98731;
 	border-bottom: 8px solid #ab4a2b;
+	background-color: #cd7e3a;
 }
 
 a:link,a:visited {	
@@ -82,9 +82,15 @@ a:hover,a:focus,a:active {
 	text-decoration: none;
 }
 
-#wrap {
+#bg-wrap {
+	width: 100%;
+	background-color: #d98731;
+}
+
+#content-wrap {
 	width: 1200px;
-	margin: 0 auto 100px auto;
+	margin: 0 auto;
+	padding-bottom: 40px;
 }
 
 section {
@@ -145,25 +151,7 @@ img#ribbon {
 	border: 0;
 }
 
-/*
-About Box
------------------------
-*/
 
-hgroup h3 span {
-	float: right;
-	padding-right: 53px;
-}
-
-#about {
-	color: #fff;
-	display: none;
-}
-
-#about section p {
-	line-height: 120%;
-	margin-bottom: 20px;
-}
 
 /*
 Terminal Preview Box
@@ -295,10 +283,21 @@ bash profile copytext Box
 	border: 3px dashed #353635;
 	background-color: #ddd;
 }
-/*#copytext {
-	padding: 30px;
-	border: 3px dashed #353635;
-	background-color: #ddd;
-}*/
 
 
+
+/*
+footer
+-----------------------
+*/
+
+footer {
+	width: 1200px;
+	margin: 60px auto;	
+	color: #fff;
+	line-height: 160%;
+}
+
+footer p {
+	margin: 20px 0;
+}

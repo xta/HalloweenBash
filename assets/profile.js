@@ -415,6 +415,12 @@ $(document).ready(function() {
 					     bash_string: " ", 
 					    example_copy: "&nbsp;", 
 					long_description: "space"
+		},
+		"psat": {
+					         text_id: "psat", 
+					     bash_string: "@", 
+					    example_copy: "@", 
+					long_description: "at symbol"
 		}
 	};
 

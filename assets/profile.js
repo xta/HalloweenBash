@@ -300,7 +300,14 @@ $(document).ready(function() {
 									 bash_string: "\\$(parse_git_branch)",
 									 example_copy: "(master)",
 									 long_description: "the current git branch",
-									 helpers: "function parse_git_branch { <br /> &nbsp;&nbsp; git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/(\\1)/' <br /> }"
+									 helpers: "function parse_git_branch { <br /> &nbsp;&nbsp; git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/(\\1)/' <br /> } <br />"
+		},
+		"psexitstatus": {
+									 text_id: "psexitstatus",
+									 bash_string: "\\$(show_exit_status)",
+									 example_copy: "0",
+									 long_description: "the exit status",
+									 helpers: "show_exit_status() { <br /> &nbsp;&nbsp;echo -e \"\$?\"; <br /> } <br />"
 		},
 		"psbang": {
 					         text_id: "psbang", 

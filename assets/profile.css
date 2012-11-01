@@ -131,6 +131,8 @@ ul li {
 	border-radius: 10px; 
 	-moz-border-radius: 10px; 
 	-webkit-border-radius: 10px;
+	cursor: pointer;
+	cursor: hand;
 	color:#fff;
 	background-color: #000; 
 }

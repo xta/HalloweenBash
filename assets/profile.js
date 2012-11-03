@@ -304,10 +304,9 @@ $(document).ready(function() {
 		},
 		"psexitstatus": {
 									 text_id: "psexitstatus",
-									 bash_string: "\\$(show_exit_status)",
+									 bash_string: "\\$?",
 									 example_copy: "0",
-									 long_description: "the exit status",
-									 helpers: "show_exit_status() { <br /> &nbsp;&nbsp;echo -e \"\$?\"; <br /> } <br />"
+									 long_description: "the exit status"
 		},
 		"psbang": {
 					         text_id: "psbang", 

@@ -427,6 +427,12 @@ $(document).ready(function() {
 					     bash_string: "@", 
 					    example_copy: "@", 
 					long_description: "at symbol"
+		},
+		"psgreaterthan": {
+					         text_id: "psgreaterthan",
+					     bash_string: ">",
+					    example_copy: ">",
+					long_description: "greater than"
 		}
 	};
 

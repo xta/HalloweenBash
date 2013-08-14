@@ -288,6 +288,13 @@ bash profile copytext Box
 	background-color: #ddd;
 }
 
+#copycode ::selection {
+	background: #d98731;
+	}
+#copycode ::-moz-selection {
+	background: #d98731;
+}
+
 
 
 /*

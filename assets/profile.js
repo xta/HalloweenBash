@@ -1,4 +1,4 @@
-/* HalloweenBash 2012 by rexfeng */
+/* HalloweenBash 2012 - 2013 by rexfeng */
 $(document).ready(function() {
 
 	// get initial configs state

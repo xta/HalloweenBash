@@ -1,4 +1,4 @@
-# Halloween Bash v0.1.0
+# Halloween Bash v0.1.1
 
 Customize your bash PS1 config & color.
 

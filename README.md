@@ -1,4 +1,4 @@
-# Halloween Bash v0.1.1
+# Halloween Bash v0.1.2
 
 Customize your bash PS1 config & color.
 
@@ -10,9 +10,11 @@ Customize your bash PS1 config & color.
 2. Click to select desired colors.
 3. Copy text into `~/.bash_profile`
 
-## Credit
+## Contributors
 
 by Rex Feng 2012 - 2013
+
+[Thanks to all the wonderful contributors](https://github.com/xta/HalloweenBash/graphs/contributors)
 
 ## License
 

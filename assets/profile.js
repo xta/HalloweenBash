@@ -322,7 +322,7 @@ $(document).ready(function() {
 		},
 		"psdollar": {
 					         text_id: "psdollar", 
-					     bash_string: "$ ", 
+					     bash_string: "\\\\$ ",
 					    example_copy: "$&nbsp;", 
 					long_description: "dollar sign"
 		},

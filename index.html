@@ -1,14 +1,14 @@
-<!doctype html>  
-<html lang="en">  
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">  
-  <title>Halloween Bash Profile Generator</title>  
-  <meta name="description" content="Bash Profile Generator">  
+  <meta charset="utf-8">
+  <title>Halloween Bash Profile Generator</title>
+  <meta name="description" content="Bash Profile Generator">
   <meta name="author" content="RexFeng">
-  <!--[if lt IE 9]>  
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
-  <![endif]-->  
-  <link rel="stylesheet" href="assets/profile.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="./public/all.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
     <div id="area">
       <span id="prompt">
         <!--Last login: Wed Oct  3 18:14:19 on ttys001<br />-->
-        macbook:HalloweenBash jon$ 
+        macbook:HalloweenBash jon$
       </span>
     </div>
     </section>
@@ -90,7 +90,7 @@
         <li class="psspace">(space)</li>
       </ul>
     </section>
-    
+
     <h2>2.) Choose your colors</h2>
     <section id="colorpick" class="setupbox">
       <h3>Foreground</h3>
@@ -134,26 +134,21 @@
   </h2>
   <p>
     In our first week of learning to code, we were getting familiar with the Command Line and
-    customizing our bash prompts. 
+    customizing our bash prompts.
     This involved deciphering webpages just to do simple tasks like adding colors or displaying the time.
-    I thought there had to be an easier way to do this, so 
-    <a href="./index.html" title="Bash Profile Generator">Halloween Bash</a> was created to allow people customize their bash profile 
+    I thought there had to be an easier way to do this, so
+    <a href="./index.html" title="Bash Profile Generator">Halloween Bash</a> was created to allow people customize their bash profile
     with an intuitive drag & drop interface.
-  </p>  
+  </p>
   <p>
-    If you have any comments or feedback, please reach out to me 
+    If you have any comments or feedback, please reach out to me
     at <a href="https://twitter.com/rexfeng">@rexfeng</a>. Thanks for checking out <a href="./index.html" title="Bash Profile Generator">Halloween Bash</a>!
   </p>
 </footer>
 
 <a href="https://github.com/xta/HalloweenBash"><img id="ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"/></a>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script src="./assets/jquery.ui.core.js"></script>
-  <script src="./assets/jquery.ui.widget.js"></script>
-  <script src="./assets/jquery.ui.mouse.js"></script>
-  <script src="./assets/jquery.ui.sortable.js"></script>
-  <script src="./assets/profile.js"></script>
+  <script src="./public/all.min.js"></script>
   <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-34781094-2']);
@@ -164,5 +159,5 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
   </script>
-</body>  
+</body>
 </html>

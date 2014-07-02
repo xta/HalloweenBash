@@ -1,0 +1,34 @@
+{
+  "name": "HalloweenBash",
+  "version": "0.1.2",
+  "description": "Custom Bash Profile Generator",
+  "main": "index.html",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xta/HalloweenBash.git"
+  },
+  "keywords": [
+    "ps1",
+    "config",
+    "bash",
+    "profile",
+    "generator"
+  ],
+  "author": "Rex Feng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xta/HalloweenBash/issues"
+  },
+  "homepage": "https://github.com/xta/HalloweenBash",
+  "devDependencies": {
+    "gulp": "^3.8.5",
+    "gulp-concat": "^2.2.0",
+    "gulp-jshint": "^1.6.4",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-uglify": "^0.3.1"
+  }
+}

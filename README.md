@@ -10,9 +10,17 @@ Customize your bash PS1 config & color.
 2. Click to select desired colors.
 3. Copy text into `~/.bash_profile`
 
+## Development
+
+    # setup dependencies
+    npm install
+
+    # run tasks
+    gulp
+
 ## Contributors
 
-by Rex Feng 2012 - 2013
+by Rex Feng 2012 - 2014
 
 [Thanks to all the wonderful contributors](https://github.com/xta/HalloweenBash/graphs/contributors)
 

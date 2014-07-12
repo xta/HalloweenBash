@@ -54,7 +54,7 @@ gulp.task('styles', function() {
 gulp.task('watch', function() {
     gulp.watch('assets/css/*.css', ['styles']);
     gulp.watch('assets/js/lib/*.js', ['specs', 'lint', 'scripts']);
-    gulp.watch('assets/js/spec/*.js', ['specs']);
+    gulp.watch('assets/js/spec/lib/*.js', ['specs']);
 });
 
 // Default Task

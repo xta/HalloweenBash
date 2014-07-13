@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Include gulp
 var gulp = require('gulp');
@@ -16,7 +16,7 @@ var browserify  = require('browserify');
 
 // Lint Task
 gulp.task('lint', function() {
-    return gulp.src('assets/lib/profile.js')
+    return gulp.src('assets/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });

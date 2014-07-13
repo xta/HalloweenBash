@@ -29,3 +29,10 @@ describe("#long_description", function () {
     expect( period_long_description ).toBe('period');
   });
 });
+
+describe("#helpers", function () {
+  it("returns function helper", function() {
+    var helper = promptString.helpers('psgit');
+    expect( helper ).toBe("function parse_git_branch { <br /> &nbsp;&nbsp; git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/(\\1)/' <br /> } <br />")
+  });
+});

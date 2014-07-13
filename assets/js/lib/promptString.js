@@ -256,3 +256,7 @@ exports.example_copy = function(query) {
 exports.long_description = function(query) {
   return psobj[query].long_description;
 };
+
+exports.helpers = function(query) {
+  return psobj[query].helpers;
+};

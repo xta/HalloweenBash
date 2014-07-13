@@ -4,12 +4,15 @@
 var gulp = require('gulp');
 
 // Include plugins
-var jshint  = require('gulp-jshint');
-var sass    = require('gulp-sass');
-var concat  = require('gulp-concat');
-var uglify  = require('gulp-uglify');
-var rename  = require('gulp-rename');
-var jasmine = require('gulp-jasmine');
+var jshint      = require('gulp-jshint');
+var sass        = require('gulp-sass');
+var concat      = require('gulp-concat');
+var uglify      = require('gulp-uglify');
+var rename      = require('gulp-rename');
+var jasmine     = require('gulp-jasmine');
+var source      = require('vinyl-source-stream'); // makes browserify bundle compatible with gulp
+var streamify   = require('gulp-streamify');
+var browserify  = require('browserify');
 
 // Lint Task
 gulp.task('lint', function() {
@@ -24,20 +27,12 @@ gulp.task('specs', function () {
         .pipe(jasmine());
 });
 
-// Concatenate & Minify JS
+// Concatenate, Browserify & Minify JS
 gulp.task('scripts', function() {
-    return gulp.src([
-                './assets/js/vendor/jquery-1.8.2.js',
-                './assets/js/vendor/jquery.ui.core.js',
-                './assets/js/vendor/jquery.ui.widget.js',
-                './assets/js/vendor/jquery.ui.mouse.js',
-                './assets/js/vendor/jquery.ui.sortable.js',
-                './assets/js/init.js',
-                './assets/js/lib/profile.js'
-            ])
-        .pipe(concat('all.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('public'));
+    return browserify('./assets/js/app.js').bundle()
+        .pipe(source('all.min.js'))
+        .pipe(streamify(uglify()))
+        .pipe(gulp.dest('./public/'));
 });
 
 // Concatenate CSS
@@ -53,6 +48,7 @@ gulp.task('styles', function() {
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('assets/css/*.css', ['styles']);
+    gulp.watch('assets/js/*.js', ['specs', 'lint', 'scripts']);
     gulp.watch('assets/js/lib/*.js', ['specs', 'lint', 'scripts']);
     gulp.watch('assets/js/spec/lib/*.js', ['specs']);
 });

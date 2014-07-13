@@ -14,15 +14,23 @@ exports.process = function(config, foreground_selected, background_selected) {
       colorPrefix     = '',
       colorPostfix    = '',
       promptPreview   = '',
+      functionValue,
+      functionHelper  = '',
       copyText        = '',
       i               = 0;
 
-  // process input args
+  // process input config
   for (i; i < config.length; i++) {
     promptPreview += promptString.example_copy( config[i] );
     copyText      += promptString.bash_string( config[i] );
+
+    functionValue = promptString.helpers( config[i] );
+    if (functionValue != undefined) {
+      functionHelper += functionValue;
+    }
   }
 
+  // process input colors
   if ((foreground_selected == 'none') && (background_selected == 'none')) {
     // noop
   } else {
@@ -49,7 +57,7 @@ exports.process = function(config, foreground_selected, background_selected) {
     promptTextColor: promptTextColor,
     promptBgColor: promptBgColor,
     promptCopyText: promptPreview,
-    functionHelper: '',
+    functionHelper: functionHelper,
     copyText: copyText
   }
 }

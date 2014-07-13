@@ -68,4 +68,36 @@ describe("#process", function () {
     });
   });
 
+  describe("a sample config with a function used and no colors set", function() {
+    it("returns correct output", function () {
+      var config              = ['psh', 'pscolon', 'psworking', 'psspace', 'psu', 'psspace', 'psgit', 'psdollar'],
+          foreground_selected = 'none',
+          background_selected = 'none';
+
+      var result = processor.process(config, foreground_selected, background_selected);
+
+      expect( result.promptTextColor ).toBe('none');
+      expect( result.promptBgColor ).toBe('none');
+      expect( result.promptCopyText ).toBe('macbook:HalloweenBash&nbsp;jon&nbsp;(master)$&nbsp;');
+      expect( result.functionHelper ).toBe("function parse_git_branch { <br /> &nbsp;&nbsp; git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/(\\1)/' <br /> } <br />");
+      expect( result.copyText ).toBe('export PS1="\\h:\\W \\u \\$(parse_git_branch)\\\\$ "');
+    });
+  });
+
+  describe("a sample config with a function used and colors set", function() {
+    it("returns correct output", function () {
+      var config              = ['psworking', 'pshash', 'pscolon', 'pscaret', 'pssplat', 'psquestion', 'psspace', 'pshost', 'psat', 'psleftbrace', 'psu', 'psrightbrace', 'pss', 'psgreaterthan', 'psgit', 'psdollar'],
+          foreground_selected = 'black',
+          background_selected = 'cyan';
+
+      var result = processor.process(config, foreground_selected, background_selected);
+
+      expect( result.promptTextColor ).toBe('black');
+      expect( result.promptBgColor ).toBe('cyan');
+      expect( result.promptCopyText ).toBe('HalloweenBash#:^*?&nbsp;macbook.air@{jon}-bash>(master)$&nbsp;');
+      expect( result.functionHelper ).toBe("function parse_git_branch { <br /> &nbsp;&nbsp; git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/(\\1)/' <br /> } <br />");
+      expect( result.copyText ).toBe('export PS1="\\[\\e[30;46m\\]\\W#:^*? \\H@{\\u}\\s>\\$(parse_git_branch)\\\\$ \\[\\e[0m\\]"');
+    });
+  });
+
 });

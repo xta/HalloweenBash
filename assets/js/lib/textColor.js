@@ -1,6 +1,6 @@
-"use strict";
-
 exports.text_color = function(foreground_selected) {
+
+  "use strict";
 
   var fgcolor;
 

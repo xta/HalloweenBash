@@ -1,6 +1,6 @@
-"use strict";
-
 exports.background_color = function(background_selected) {
+
+  "use strict";
 
   var bgcolor;
 

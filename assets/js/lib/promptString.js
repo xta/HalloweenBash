@@ -1,5 +1,3 @@
-"use strict";
-
 var psobj = {
   // create list of available prompt strings
   /*
@@ -242,21 +240,31 @@ var psobj = {
 };
 
 exports.text_id = function(query) {
+  "use strict";
+
   return psobj[query].text_id;
 };
 
 exports.bash_string = function(query) {
+  "use strict";
+
   return psobj[query].bash_string;
 };
 
 exports.example_copy = function(query) {
+  "use strict";
+
   return psobj[query].example_copy;
 };
 
 exports.long_description = function(query) {
+  "use strict";
+
   return psobj[query].long_description;
 };
 
 exports.helpers = function(query) {
+  "use strict";
+
   return psobj[query].helpers;
 };

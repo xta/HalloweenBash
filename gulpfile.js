@@ -14,12 +14,20 @@ var source      = require('vinyl-source-stream'); // makes browserify bundle com
 var streamify   = require('gulp-streamify');
 var browserify  = require('browserify');
 
-// Lint Task
-gulp.task('lint', function() {
+// Lint Tasks
+gulp.task('lint-app', function() {
     return gulp.src('assets/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
+
+gulp.task('lint-lib', function() {
+    return gulp.src('assets/js/lib/*.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'));
+});
+
+gulp.task('lint', ['lint-app', 'lint-lib']);
 
 // Test JS
 gulp.task('specs', function () {

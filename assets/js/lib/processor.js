@@ -1,10 +1,10 @@
-"use strict";
-
 var promptString    = require('./promptString');
 var textColor       = require('./textColor');
 var backgroundColor = require('./backgroundColor');
 
 exports.process = function(config, foreground_selected, background_selected) {
+
+  "use strict";
 
   // setup initial states
   var promptTextColor = 'none',
@@ -25,7 +25,7 @@ exports.process = function(config, foreground_selected, background_selected) {
     copyText      += promptString.bash_string( config[i] );
 
     functionValue = promptString.helpers( config[i] );
-    if (functionValue != undefined) {
+    if (functionValue !== undefined) {
       functionHelper += functionValue;
     }
   }
@@ -59,5 +59,5 @@ exports.process = function(config, foreground_selected, background_selected) {
     promptCopyText: promptPreview,
     functionHelper: functionHelper,
     copyText: copyText
-  }
-}
+  };
+};

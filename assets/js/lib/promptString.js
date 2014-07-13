@@ -107,16 +107,16 @@ var psobj = {
   },
   "psgit": {
                  text_id: "psgit",
-                 bash_string: "\\$(parse_git_branch)",
-                 example_copy: "(master)",
-                 long_description: "the current git branch",
+             bash_string: "\\$(parse_git_branch)",
+            example_copy: "(master)",
+        long_description: "the current git branch",
                  helpers: "function parse_git_branch { <br /> &nbsp;&nbsp; git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/(\\1)/' <br /> } <br />"
   },
   "psexitstatus": {
                  text_id: "psexitstatus",
-                 bash_string: "\\$?",
-                 example_copy: "0",
-                 long_description: "the exit status"
+             bash_string: "\\$?",
+            example_copy: "0",
+        long_description: "the exit status"
   },
   "psbang": {
                  text_id: "psbang",

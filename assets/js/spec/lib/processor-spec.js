@@ -100,4 +100,37 @@ describe("#process", function () {
     });
   });
 
+
+  describe("a sample config with all configs, a function used, and colors set", function() {
+    it("returns correct output", function () {
+      var config              = ['psh', 'psat', 'psd', 'psbang', 'pshost', 'pshash', 'psgit', 'pstime12hms', 'psversion', 'pssplat', 'pss', 'psperiod', 'pstime24hms', 'psleftbrace', 'psw', 'psrightbrace', 'psworking', 'psunder', 'psl', 'pscolon', 'pszero', 'psexitstatus', 'psn', 'pscaret', 'pstime24hhmm', 'pscolon', 'psspace', 'psj', 'psdash', 'psworking', 'psv', 'pscomma', 'psleftbrack', 'pstime12ampm', 'psrightbrack', 'psquestion', 'psgreaterthan', 'psspace', 'psh', 'psu', 'psu', 'psdollar'],
+          foreground_selected = 'red',
+          background_selected = 'black';
+
+      var result = processor.process(config, foreground_selected, background_selected);
+
+      expect( result.promptTextColor ).toBe('red');
+      expect( result.promptBgColor ).toBe('black');
+      expect( result.promptCopyText ).toBe('macbook@Wed Oct 31!macbook.air#(master)05:13:303.2.48*-bash.17:13:30{~/Desktop/HalloweenBash}HalloweenBash_ttys002:00<br>^17:13:&nbsp;0-HalloweenBash3.2,[05:13 PM]?>&nbsp;macbookjonjon$&nbsp;');
+      expect( result.functionHelper ).toBe("function parse_git_branch { <br /> &nbsp;&nbsp; git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/(\\1)/' <br /> } <br />");
+      expect( result.copyText ).toBe('export PS1="\\[\\e[31;40m\\]\\h@\\d!\\H#\\$(parse_git_branch)\\T\\V*\\s.\\t{\\w}\\W_\\l:0\\$?\\n^\\A: \\j-\\W\\v,[\\@]?> \\h\\u\\u\\\\$ \\[\\e[0m\\]"');
+    });
+  });
+
+  describe("a sample config no configs and no colors", function() {
+    it("returns correct output", function () {
+      var config              = [],
+          foreground_selected = 'none',
+          background_selected = 'none';
+
+      var result = processor.process(config, foreground_selected, background_selected);
+
+      expect( result.promptTextColor ).toBe('none');
+      expect( result.promptBgColor ).toBe('none');
+      expect( result.promptCopyText ).toBe('');
+      expect( result.functionHelper ).toBe('');
+      expect( result.copyText ).toBe('export PS1=""');
+    });
+  });
+
 });

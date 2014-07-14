@@ -1,3 +1,6 @@
+/* jslint node: true */
+/* global describe, it, expect */
+
 "use strict";
 
 var color_switch = require('../../lib/backgroundColor');

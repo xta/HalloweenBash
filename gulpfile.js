@@ -27,7 +27,13 @@ gulp.task('lint-lib', function() {
         .pipe(jshint.reporter('default'));
 });
 
-gulp.task('lint', ['lint-app', 'lint-lib']);
+gulp.task('lint-spec', function() {
+    return gulp.src('assets/js/spec/lib/*.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'));
+});
+
+gulp.task('lint', ['lint-app', 'lint-lib', 'lint-spec']);
 
 // Test JS
 gulp.task('specs', function () {

@@ -25,10 +25,11 @@
   "homepage": "https://github.com/xta/HalloweenBash",
   "devDependencies": {
     "browserify": "^4.2.0",
+    "chai": "^1.9.1",
     "gulp": "^3.8.5",
     "gulp-concat": "^2.2.0",
-    "gulp-jasmine": "^0.2.0",
     "gulp-jshint": "^1.6.4",
+    "gulp-mocha": "^0.5.1",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^0.7.2",
     "gulp-streamify": "0.0.5",
@@ -36,5 +37,8 @@
     "jquery": "^2.1.1",
     "jquery-ui": "^1.10.5",
     "vinyl-source-stream": "^0.1.1"
+  },
+  "dependencies": {
+    "gulp": "^3.8.6"
   }
 }

@@ -9,7 +9,7 @@ var sass        = require('gulp-sass');
 var concat      = require('gulp-concat');
 var uglify      = require('gulp-uglify');
 var rename      = require('gulp-rename');
-var jasmine     = require('gulp-jasmine');
+var mocha       = require('gulp-mocha');
 var source      = require('vinyl-source-stream'); // makes browserify bundle compatible with gulp
 var streamify   = require('gulp-streamify');
 var browserify  = require('browserify');
@@ -38,7 +38,7 @@ gulp.task('lint', ['lint-app', 'lint-lib', 'lint-spec']);
 // Test JS
 gulp.task('specs', function () {
     return gulp.src('assets/js/spec/lib/*.js')
-        .pipe(jasmine());
+        .pipe(mocha());
 });
 
 // Concatenate, Browserify & Minify JS

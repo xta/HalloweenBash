@@ -283,8 +283,6 @@ bash profile copytext Box
 	background: #d98731;
 }
 
-
-
 /*
 footer
 -----------------------
@@ -299,4 +297,20 @@ footer {
 
 footer p {
 	margin: 20px 0;
+}
+
+/*
+links
+-----------------------
+*/
+#gh-stars {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+#gh-stars a {
+	color: #FF851B;
+	border: 0;
+	text-decoration: none;
 }

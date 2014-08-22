@@ -56,7 +56,7 @@ body {
 	font-family:courier;
 	color: #353635;
 	border-bottom: 8px solid #ab4a2b;
-	background-color: #cd7e3a;
+	background-color: #D46200;
 }
 
 a:link,a:visited {
@@ -72,7 +72,7 @@ a:hover,a:focus,a:active {
 
 #bg-wrap {
 	width: 100%;
-	background-color: #d98731;
+	background-color: #FF851B;
 }
 
 #content-wrap {
@@ -131,7 +131,7 @@ ul li {
 	border-radius: 20px;
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
-	background-color: #ffa461;
+	background-color: #FFB371;
 }
 
 img#ribbon {

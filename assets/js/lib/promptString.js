@@ -110,6 +110,13 @@ var psobj = {
         long_description: "the current git branch",
                  helpers: "function parse_git_branch { <br /> &nbsp;&nbsp; git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/(\\1)/' <br /> } <br />"
   },
+  "psfreeram": {
+                 text_id: "psfreeram",
+             bash_string: "\\$(parse_freeram)MB",
+            example_copy: "1320 MB",
+        long_description: "free RAM",
+                 helpers: "function parse_freeram () { <br /> &nbsp;&nbsp; free -m | awk '{print $4}' | head -2 | tail -1; <br /> }"
+  },
   "psexitstatus": {
                  text_id: "psexitstatus",
              bash_string: "\\$?",
